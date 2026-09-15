@@ -415,9 +415,19 @@ def search_jsearch(query: str) -> list:
     headers = {"x-rapidapi-key": RAPIDAPI_KEY, "x-rapidapi-host": "jsearch.p.rapidapi.com"}
     params = {"query": query, "num_pages": "1", "date_posted": "week", "work_from_home": "true"}
 
+    # ── DEBUG LOGS ──
+    log.info(f"Using key: {RAPIDAPI_KEY[:10]}... (len={len(RAPIDAPI_KEY)}, redacted)")
+    log.info(f"Request URL: {url}")
+    log.info(f"Request params: {params}")
+
     for attempt in range(1, 4):
         try:
             resp = requests.get(url, headers=headers, params=params, timeout=20)
+
+            # ── DEBUG RESPONSE ──
+            log.info(f"Response status: {resp.status_code}")
+            log.info(f"Response body: {resp.text[:200]}")
+
             if resp.status_code == 429:
                 log.warning("JSearch rate limit — waiting 60s")
                 time.sleep(60)
