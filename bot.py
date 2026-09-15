@@ -88,9 +88,9 @@ MIN_FIT_SCORE    = 35
 MAX_JOB_AGE_DAYS = 7
 
 JSEARCH_QUERIES = {
-    1: ["Junior SEO remote", "Technical SEO remote", "SEO Python remote"],
-    2: ["SEO Content Editor remote", "WordPress SEO Specialist remote"],
-    3: ["on-page SEO specialist remote", "SEO copywriter remote"],
+    1: ["Product Designer remote", "UX Designer remote", "UI Designer remote"],
+    2: ["Product Design remote", "UX/UI Designer remote", "Interaction Designer remote"],
+    3: ["Junior Product Designer remote", "UX Researcher remote", "Design Systems remote"],
 }
 
 _DEFAULT_SKILLS = [
@@ -113,10 +113,10 @@ BLACKLIST_KEYWORDS = [
 ]
 
 BOOST_KEYWORDS = {
-    "technical seo": 20, "python": 18, "wordpress": 15,
+    "product design": 20, "ux": 18, "ui": 15,
+    "figma": 15, "design system": 12, "user research": 10,
     "junior": 18, "entry level": 15, "associate": 12,
-    "seo specialist": 12, "seo editor": 12, "content editor": 10,
-    "on-page": 10, "part-time": 8, "contract": 5,
+    "prototyping": 10, "wireframe": 8, "usability": 8,
     "remote-first": 8, "async": 5, "flexible": 4,
 }
 
